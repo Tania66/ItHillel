@@ -22,12 +22,14 @@ console.log(typeof nickName);
 console.log(typeof skills);
 
 //task 2
-const firstSentence = "this is just the beginning of the journey";
-const secondSentence = "Java script is a cool thing";
-const thirdSentence = "let the hunger games begin";
+
+const firstSentence = prompt("How are you", "");
+const secondSentence = prompt("what's your favorite movie", "");
+const thirdSentence = prompt("last book you read", "");
 
 console.log(`${secondSentence},`, `${firstSentence},`, `${thirdSentence}.`);
 
 //task 3
-const nick = "43221";
+let nick = 43221;
+nick = String(nick);
 console.log(nick.split("").join(" "));
