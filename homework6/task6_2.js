@@ -1,4 +1,3 @@
-// 6.2
 function getArithmeticMean(arr) {
   let arrNum = [];
   let sum = 0;
@@ -38,38 +37,3 @@ getArithmeticMean([13, "7", 2, 8, "2"]);
 //     getArithmeticMean(["ponchil", 15, "h", 55]);
 //     getArithmeticMean([["e", "c", "g"], 3, "", 4]);
 //     getArithmeticMean([13, "7", 2, 8, "2"]);
-
-// // 6.3
-// function removeElement(array, item) {
-//   let newArr = [];
-//   for (const elem of array) {
-//     if (elem !== item) {
-//       newArr.push(elem);
-//     }
-//   }
-//   console.log(newArr);
-// }
-
-// removeElement([1, 4, 3, 2, 8], 4);
-// removeElement([13, 2, 8], 13);
-// removeElement([1, 4, 3, 17], 17);
-// removeElement([14, 3, 2, 8], 14);
-// removeElement(["vanini", "bublik", "morti"], "vanini");
-
-// Я в процесі))
-// // 6.1
-// let userString = prompt("Enter your sentence", "");
-// let userSymbol = prompt("enter symbol which tou want to delete", "");
-// let newString = "";
-// function getUpdateString(string, symbol) {
-//   const symbolUser = symbol.split("");
-//   for (let i = 0; i < string.length; i++) {
-//     const elem = string[i];
-//     if (elem !== symbol) {
-//       newString = elem;
-//     }
-//     console.log(newString);
-//   }
-// }
-
-// getUpdateString(userString, userSymbol);
