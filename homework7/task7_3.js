@@ -20,5 +20,5 @@ const checkNumber = function (attempt) {
   };
 };
 
-const result = checkNumber(3);
+const result = checkNumber(10);
 result(value);
