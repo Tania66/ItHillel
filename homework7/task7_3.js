@@ -1,24 +1,21 @@
-let value = "";
-const checkNumber = function (attempt) {
-  return function (number) {
-    for (let i = 0; i < attempt; i++) {
-      number = prompt("enter number more 100", "");
-      const count = Number(number);
-      if (count < 100) {
-        alert("The number must be greater than 100, try again😱");
-      } else if (isNaN(number)) {
-        alert("Something went wrong😱");
-        break;
-      } else if (count > 100) {
-        alert("Wow, your number🥰");
-        break;
-      } else if (attempt === i) {
-        break;
-      }
+const checkNumber = function () {
+  const attempt = 10;
+  for (let i = 0; i < attempt; i++) {
+    let number = prompt("enter number more 100", "");
+    const count = Number(number);
+    if (attempt === i) {
+      break;
+    } else if (count > 100) {
+      console.log(`Wow, your number ${number}`);
+      break;
+    } else if (isNaN(number)) {
+      console.log("Something went wrong");
+      break;
+    } else if (count < 100) {
+      console.log("The number must be greater than 100, try again");
     }
-    console.log(number);
-  };
+  }
+  console.log(number);
 };
 
-const result = checkNumber(10);
-result(value);
+checkNumber();
