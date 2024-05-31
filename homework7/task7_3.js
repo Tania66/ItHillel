@@ -14,8 +14,8 @@ const checkNumber = function () {
     } else if (count < 100) {
       console.log("The number must be greater than 100, try again");
     }
+    console.log(number);
   }
-  console.log(number);
 };
 
 checkNumber();
