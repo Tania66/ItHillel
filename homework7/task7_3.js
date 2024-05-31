@@ -9,7 +9,7 @@ const checkNumber = function () {
       console.log(`Wow, your number ${number}`);
       break;
     } else if (isNaN(number)) {
-      console.log("Something went wrong");
+      console.log(`Something went wrong ${number}`);
       break;
     } else if (count < 100) {
       console.log("The number must be greater than 100, try again");
