@@ -1,21 +1,16 @@
-class Step {
-  value = 0;
-
-  up() {
+let ladder = {
+  value: 0,
+  up: function () {
     this.value += 1;
     return this;
-  }
-
-  down() {
+  },
+  down: function () {
     this.value -= 1;
     return this;
-  }
+  },
+  showStep: function () {
+    console.log(this.value);
+  },
+};
 
-  showStep() {
-    return console.log(this.value);
-  }
-}
-
-let ladder = new Step();
-
-ladder.up().up().down().up().up().up().up().down().down().showStep();
+ladder.up().up().up().up().up().up().showStep();
