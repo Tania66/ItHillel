@@ -1,0 +1,40 @@
+.container{
+    padding: 20px 0;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+
+}
+
+
+table 
+{
+	border-collapse: separate;
+}
+
+
+th
+{
+	background: #69BFE1;
+	font-weight: bold;
+}
+
+td, th 
+{
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 14px;
+	font-family: Tahoma;
+	color: #fff;
+	border: 2px solid rgba(105,191,225, 0.5);
+}
+
+
+td 
+{
+	color: #69BFE1;
+    font-weight: bold;
+}
