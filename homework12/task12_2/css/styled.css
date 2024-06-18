@@ -1,0 +1,29 @@
+.btn-container {
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.btn {
+    display: block;
+    padding: 11px 22px;
+    border-radius: 12px;
+background:#7E8FDD;
+border: none;
+color: #FDFDFF;
+font-size: 14px;
+font-weight: 600;
+line-height: 1.33;
+letter-spacing: 0.36px;
+text-transform: uppercase;
+transition: all .15s ease-in 0s;
+}
+
+.btn:hover,
+.btn:focus{
+    background: #6E7FCF;
+}
+
+
