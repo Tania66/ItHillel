@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styled.css">
+    <title>Form</title>
+</head>
+<body>
+    <div class="form_inner">
+        <form class="form">
+            <p class="form_title">We would like to help you</p>
+            <label for="name">
+                <input type="text" placeholder="Name" class="input" name="name" id="name" data-value="name">
+          
+            </label>
+            <label for="message">
+                <textarea name="Message" placeholder="Message" class="textarea" name="message" id="message" data-value="message"></textarea>
+               
+            </label>
+          
+            
+                <p class="help_text">How to answer you?</p>
+                  <label for="phone">
+                <input type="tel" placeholder="+380" class="input" name="phone" id="phone" data-value="phone">
+              
+            </label>
+                   <label for="email">
+                <input type="email"  placeholder="Email" class="input" name="email" id="email" data-value="email">
+                  
+            </label>  
+         
+       
+            <button class="form_btn" type="submit">Send message</button>
+        </form>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
