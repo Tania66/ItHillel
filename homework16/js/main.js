@@ -59,14 +59,14 @@ let firstStudent = new Student(
   "Red",
   2005,
   [100, 100, 100, 100, 100],
-  Array()
+  Array(24)
 );
 let secondStudent = new Student(
   "Ponchik",
   "Glazyr",
   2000,
   [95, 95, 95, 95, 93, 94, 95],
-  Array()
+  Array(24)
 );
 
 let thirdStudent = new Student(
@@ -74,9 +74,10 @@ let thirdStudent = new Student(
   "Salt",
   2000,
   [50, 50, 50, 50, 50, 64, 61],
-  Array()
+  Array(24)
 );
 
+console.log(secondStudent);
 firstStudent.getAge();
 firstStudent.averageRating();
 firstStudent.present();
