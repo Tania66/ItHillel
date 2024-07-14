@@ -1,0 +1,48 @@
+.container {
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+
+
+}
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title{
+margin: 0;
+color:  #7E8FDD;
+font-size: 64px;
+font-weight: 400;
+line-height: 70px;
+}
+
+
+.value_time {
+    color:  #7E8FDD;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+.start_btn {
+    border-radius: 12px;
+    background:  #7E8FDD;
+    border: none;
+    color: #FDFDFF;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 1.33;
+letter-spacing: 0.36px;
+text-transform: uppercase;
+padding: 11px 22px;
+}
+
