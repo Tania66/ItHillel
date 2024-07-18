@@ -27,8 +27,9 @@ p{
 display: flex;
 align-items:center;
 justify-content: space-evenly;
-background-color: #407BFF;
+background-color:#8eaffc;
 border-radius: 20px;
+position: relative;
 }
 
 
@@ -40,6 +41,9 @@ border: none;
 display: block;
 cursor: pointer;
 margin: 15px;
+position: absolute;
+top: 0;
+left: 37%;
 }
 
 .update_icon{
