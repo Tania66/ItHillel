@@ -1,25 +1,18 @@
-const inputEl = document.querySelector(".js--form__input");
-const todoList = document.querySelector(".js--todos-wrapper");
 const todos = JSON.parse(localStorage.getItem("todolist")) || [];
 
 function createTodoList() {
-  todoList.innerHTML = [...todos]
-    .map(
-      (todo) =>
-        `
-      <li  class=" todo-item ${
-        todo.completed ? "todo-item--checked" : ""
-      } data-toggle="modal" data-target="#todoModal">
-          <input type="checkbox" id=${todo.id} ${
-          todo.completed ? "checked" : ""
-        }>
-               <span class="todo-item__description">${todo.description}</span>
-               <button class="todo-item__delete" id=${todo.id}>Видалити</button>
-      </li>`
-    )
-    .join("");
+  $(".js--todos-wrapper").empty();
+  todos.forEach((todo) => {
+    $(".js--todos-wrapper").append(
+      `
+    <li class="todo-item ${todo.completed ? "todo-item--checked" : ""}" >
+        <input type="checkbox" id=${todo.id} ${todo.completed ? "checked" : ""}>
+        <span class="todo-item__description">${todo.description}</span>
+        <button class="todo-item__delete" id=${todo.id}>Видалити</button>
+    </li>`
+    );
+  });
 }
-createTodoList();
 
 const handleAddTodo = (newTodo) => {
   const todo = {
@@ -32,16 +25,18 @@ const handleAddTodo = (newTodo) => {
 };
 
 $(document).ready(function () {
+  createTodoList();
+
   $(".js--form").on("submit", function (event) {
     event.preventDefault();
-    const newTodo = inputEl.value.trim();
+    const newTodo = $(".js--form__input").val().trim();
     if (newTodo === "") return alert("Please enter todoshky)");
     handleAddTodo(newTodo);
-    inputEl.value = "";
+    $(".js--form__input").val(" ");
     localStorage.setItem("todolist", JSON.stringify(todos));
   });
 
-  $(".todo-item__delete").on("click", function () {
+  $(document).on("click", ".todo-item__delete", function () {
     const clickId = $(this).attr("id");
     const index = todos.findIndex((todo) => todo.id === Number(clickId));
     if (index !== -1) {
@@ -51,20 +46,20 @@ $(document).ready(function () {
     createTodoList();
   });
 
-  $("input[type=checkbox]").on("change", function () {
+  $(document).on("change", "input[type=checkbox]", function () {
     const checkId = $(this).attr("id");
-    todos.map((todo) => {
-      if (todo.id !== Number(checkId)) {
-        return todo;
+    todos.forEach((todo) => {
+      if (todo.id === Number(checkId)) {
+        todo.completed = !todo.completed;
       }
-      todo.completed = !todo.completed;
-      localStorage.setItem("todolist", JSON.stringify(todos));
-      createTodoList();
     });
+    localStorage.setItem("todolist", JSON.stringify(todos));
+    createTodoList();
   });
 
-  $(".todo-item__description").on("click", function () {
-    $("#textTodo").text($(this).text());
+  $(document).on("click", ".todo-item__description", function () {
+    const modalText = $(this).text();
+    $("#textTodo").text(modalText);
     $("#todoModal").modal("show");
   });
 });
